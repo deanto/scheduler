@@ -1,0 +1,7 @@
+D:\мои проекты\разработка\PayScheduler\PayScheduler\PayScheduler\bin\Debug\PayScheduler.exe
+D:\мои проекты\разработка\PayScheduler\PayScheduler\PayScheduler\bin\Debug\PayScheduler.pdb
+D:\мои проекты\разработка\PayScheduler\PayScheduler\PayScheduler\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\мои проекты\разработка\PayScheduler\PayScheduler\PayScheduler\obj\x86\Debug\PayScheduler.Form1.resources
+D:\мои проекты\разработка\PayScheduler\PayScheduler\PayScheduler\obj\x86\Debug\PayScheduler.Properties.Resources.resources
+D:\мои проекты\разработка\PayScheduler\PayScheduler\PayScheduler\obj\x86\Debug\PayScheduler.exe
+D:\мои проекты\разработка\PayScheduler\PayScheduler\PayScheduler\obj\x86\Debug\PayScheduler.pdb
