@@ -8,7 +8,7 @@ using PayScheduler.Views;
 
 namespace PayScheduler.Structures
 {
-    class Month:IFrame
+    class Month:IFrame,IFrameDrow
     {
         /* класс для месяца. содержит ссылки на дни. 
          */
@@ -32,7 +32,10 @@ namespace PayScheduler.Structures
             for (int i = 0; i < 31; i++) days[i] = pearent[i].copy();
         }
 
-        public IFrame this[int i] { get { return days[i]; } set { days[i] = value; } }
+        public IFrame this[int i] {
+            get { 
+                return days[i];
+            } set { days[i] = value; } }
 
         public IFrame copy()
         {
@@ -45,40 +48,63 @@ namespace PayScheduler.Structures
         {
             return ID;
         }
+
+        public Bitmap Drow(IFrame frame)
+        {
+            MonthSimpleDrow t = new MonthSimpleDrow();
+            return t.Drow(this);
+        }
     }
+
+
     class MonthSimpleDrow : IFrameDrow
     {
+
+        /// <summary>
+        ///  это самый простой рисовальщик. таким будут рисоваться неактивные месяцы сбоку, в списке и прочее.
+        /// </summary>
+        /// <param name="frame"></param>
+        /// <returns></returns>
         public Bitmap Drow(IFrame frame)
         {
             if (String.Equals(frame.id(), "month"))
             {
+                // это значит первоначальный вариант, когда рисуются дни.
 
-                Month t=(Month)frame;
+                //Month t=(Month)frame;
 
-                DayViewFull dw = new DayViewFull();
+                //DayViewFull dw = new DayViewFull();
 
-                Bitmap[] days = new Bitmap[31];
-                int x=0,y=0;
+                //Bitmap[] days = new Bitmap[31];
+                //int x=0,y=0;
 
-                for (int i = 0; i < 31; i++)
-                {   
-                    days[i] = dw.Drow(t[i]);
-                    x+=days[i].Width+10;
+                //for (int i = 0; i < 31; i++)
+                //{   
+                //    days[i] = dw.Drow(t[i]);
+                //    x+=days[i].Width+30;
                     
-                    if (days[i].Height+10 > y) y=days[i].Height+10;
-                }
+                //    if (days[i].Height+30 > y) y=days[i].Height+30;
+                //}
 
-                Bitmap result = new Bitmap(x, y);
-                Graphics g = Graphics.FromImage(result);
+                //Bitmap result = new Bitmap(x, y);
+                //Graphics g = Graphics.FromImage(result);
                 
-                int p=0;
-                for (int i=0;i<31;i++){
+                //int p=0;
+                //for (int i=0;i<31;i++){
 
-                    g.DrawImageUnscaled(days[i], p, 0);
-                    p += days[i].Width + 10;
-                    }
+                //    g.DrawImageUnscaled(days[i], p, 0);
+                //    p += days[i].Width + 30;
+                //    }
 
+                //return result;
+
+
+                // стандартное отображение используется для отображения фона месяца в фреймах
+                Bitmap result = new Bitmap(100, 100);
+                Graphics g = Graphics.FromImage(result);
+                g.FillRectangle(Brushes.Beige, 0, 0, 100, 100);
                 return result;
+
             }
             return null;
 

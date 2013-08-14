@@ -8,7 +8,7 @@ using PayScheduler.Views;
 
 namespace PayScheduler.Structures
 {
-    class Day:IFrame
+    class Day:IFrame,IFrameDrow
     {
         /* класс содержащий информацию на день.
          */
@@ -44,6 +44,12 @@ namespace PayScheduler.Structures
         }
 
 
+
+        public Bitmap Drow(IFrame frame)
+        {
+            DayViewOne r = new DayViewOne();
+            return r.Drow(this);
+        }
     }
     class DayViewOne : IFrameDrow
     {
@@ -77,7 +83,7 @@ namespace PayScheduler.Structures
 
                 Bitmap simple = t.Drow(frame);
                 Graphics g = Graphics.FromImage(simple);
-                g.DrawString("Full", new Font("Times", 5), Brushes.Gold, 3, 15);
+                g.DrawString("Full", new Font("Times", 100), Brushes.Gold, 3, 15);
 
                 return simple;
             }

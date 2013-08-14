@@ -52,9 +52,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structures\Background.cs" />
     <Compile Include="Structures\Day.cs" />
     <Compile Include="Structures\IFrame.cs" />
     <Compile Include="Structures\Month.cs" />
+    <Compile Include="Views\FrameWorker.cs" />
     <Compile Include="Views\IFrameDrow.cs" />
     <Compile Include="Views\ViewSettings.cs" />
     <EmbeddedResource Include="Form1.resx">

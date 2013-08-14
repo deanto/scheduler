@@ -18,8 +18,8 @@ namespace PayScheduler.Views
         private ViewSettings()
         {
             // default
-            dayx = 10;
-            dayy = 30;
+            dayx = 40;
+            dayy = 70;
         }
 
         private static ViewSettings link;
